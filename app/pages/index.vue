@@ -22,7 +22,7 @@
                 <div class="flex justify-between items-center sm:gap-[16px]">
                     <a class="invisible w-0 sm:w-full sm:visible" href="#menu">Menu</a>
                     <a
-                        href="https://api.whatsapp.com/send?phone=584129797775"
+                        href="https://api.whatsapp.com/send?phone=584148787913"
                         class="invisible w-0  sm:w-full sm:visible"
                         >Whatsapp</a
                     >
