@@ -4,7 +4,7 @@
             ref="_navbar"
             id="navbar"
             :class="[
-                'w-full h-[88px] bg-[#FBD288] flex justify-center fixed top-0  z-2',
+                'w-full h-[88px] bg-[#FF1493] flex justify-center fixed top-0  z-2',
                 {
                     'hidden-navbar ': _is_hidden,
                 },
@@ -14,16 +14,16 @@
                 class="flex justify-between items-center w-full sm:w-[1024px] px-[16px]"
             >
                 <img
-                    src="/icons/family-logo.svg"
+                    src="/icons/logodulce-caramelo.svg"
                     alt=""
-                    height="56"
-                    width="64"
+                    height="120"
+                    width="170"
                 />
-                <div class="flex justify-between items-center gap-[16px]">
-                    <a class="invisible sm:visible" href="#menu">Menu</a>
+                <div class="flex justify-between items-center sm:gap-[16px]">
+                    <a class="invisible w-0 sm:w-full sm:visible" href="#menu">Menu</a>
                     <a
                         href="https://api.whatsapp.com/send?phone=584129797775"
-                        class="invisible sm:visible"
+                        class="invisible w-0  sm:w-full sm:visible"
                         >Whatsapp</a
                     >
                     <button
@@ -32,12 +32,12 @@
                                 'ORDER_MODAL',
                                 undefined,
                                 undefined,
-                                undefined
+                                undefined,
                             )
                         "
-                        class="flex justify-center items-center gap-[8px] h-[48px] border border-[#522711] sm:px-[32px] px-[16px] py-[12px] rounded-[6px] bg-[#FF4545] text-[white] hover:translate-y-[-6px]"
+                        class="flex justify-center items-center gap-[8px] h-[48px] sm:px-[32px] px-[16px] py-[12px] rounded-[6px] bg-[#00FFFF] text-[black] hover:translate-y-[-6px]"
                     >
-                        <FoodIcon />
+                        🎂
                         <div class="whitespace-nowrap">
                             Mi pedido ({{ $store_manager.cart.length }})
                         </div>
@@ -51,10 +51,10 @@
                 <div class="flex flex-col text-center gap-[32px]">
                     <div class="flex flex-col gap-[16px]">
                         <h1 class="text-[#333333]">
-                            ¿Qué quieres almorzar hoy?
+                            ¿Que torta deseas pedir?
                         </h1>
                         <p class="text-[#333333]">
-                            Elige tu almuerzo, agrega extras y te lo llevamos.
+                            Escoge la torta perfecta para tus celebraciones.
                         </p>
                     </div>
                     <div
@@ -62,9 +62,9 @@
                     >
                         <a
                             href="#menu"
-                            class="flex justify-center items-center gap-[8px] w-[224px] h-[56px] border border-[#522711] px-[32px] py-[16px] rounded-[12px] bg-[#FFBC0D] text-[#522711] scroll-smooth"
+                            class="flex justify-center items-center gap-[8px] w-[224px] h-[56px] px-[32px] py-[16px] rounded-[12px] bg-[#FFB6C1] text-[#522711] scroll-smooth"
                         >
-                            <ForkIcon />
+                            🎂
                             <p class="whitespace-nowrap">Empezar pedido</p>
                         </a>
                         <h6 class="text-[#333333]">
@@ -80,7 +80,7 @@
                 class="flex flex-col justify-center items-start max-w-[1024px] my-[64px]"
             >
                 <div id="menu" class="flex mb-[64px]">
-                    <h2>Menú</h2>
+                    <h2>Catalogo</h2>
                 </div>
                 <div
                     class="flex flex-col justify-center items-center sm:grid sm:grid-cols-3 gap-x-[32px] gap-y-[64px]"
@@ -94,7 +94,7 @@
                                 'SELECTED_PRODUCT',
                                 product,
                                 undefined,
-                                undefined
+                                undefined,
                             )
                         "
                     />
@@ -103,17 +103,16 @@
         </div>
 
         <div
-            class="flex justify-center h-[270px] bg-[#F24C4C] text-[white] px-[16px]"
+            class="flex justify-center h-[270px] bg-[#FF1493] text-[white] px-[16px]"
         >
             <div class="flex justify-between items-center w-[1024px] my-[64px]">
                 <div class="flex flex-col gap-[16px]">
                     <img
-                        src="/icons/family-logo-white.svg"
+                        src="/icons/logodulce-caramelo.svg"
                         alt=""
-                        height="56"
-                        width="64"
+                        height="130"
+                        width="170"
                     />
-                    <p>Los cinco sabores</p>
                 </div>
                 <div class="flex flex-col justify-center items-end gap-[16px]">
                     <h4>Contacto</h4>
@@ -122,7 +121,7 @@
                     </p>
                     <div class="flex justify-center gap-[16px]">
                         <a
-                            href="https://www.instagram.com/rest_loscincosabores/"
+                            href="https://www.instagram.com/dullcecaramelo/"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
@@ -130,7 +129,7 @@
                         </a>
                         <a
                             target="_blank"
-                            href="https://api.whatsapp.com/send?phone=584129797775"
+                            href="https://api.whatsapp.com/send?phone=584148787913"
                         >
                             <WhasappIcon />
                         </a>
@@ -139,6 +138,7 @@
             </div>
         </div>
     </div>
+    <FloatChat />
     <ModalOrder
         @close="$store_manager.onCloseModal()"
         v-if="$store_manager.modal_on === 'ORDER_MODAL'"
@@ -153,6 +153,7 @@
 </template>
 
 <script setup lang="ts">
+import FloatChat from "~/components/floats/FloatChat.vue";
 import FoodIcon from "~/components/icons/FoodIcon.vue";
 import ForkIcon from "~/components/icons/ForkIcon.vue";
 import InstagramIcon from "~/components/icons/InstagramIcon.vue";
@@ -160,17 +161,17 @@ import WhasappIcon from "~/components/icons/WhasappIcon.vue";
 import ProductCard from "~/components/menu/ProductCard.vue";
 
 useSeoMeta({
-    title: "Restaurant Los cinco sabores c.a",
-    ogTitle: "Restaurant Los cinco sabores c.a",
-    description: "Platos caseros y tradicionales para toda la familia",
-    ogDescription: "Platos caseros y tradicionales para toda la familia",
+    title: "Dulce Caramelo",
+    ogTitle: "Dulce Caramelo",
+    description: "Ricas tortas para tus celebraciones y eventos",
+    ogDescription: "Ricas tortas para tus celebraciones y eventos",
     ogImage:
-        "https://rlcms-fotos-producto.s3.sa-east-1.amazonaws.com/fotos-productos/ogimage.png",
+        "/icons/logodulce-caramelo.svg",
 });
 
 useHead({
     link: [
-        { rel: "icon", type: "image/x-icon", href: "/icons/family-logo.svg" },
+        { rel: "icon", type: "image/x-icon", href: "/icons/logodulce-caramelo.svg" },
     ],
 });
 
@@ -233,7 +234,10 @@ onUnmounted(() => {
 
 <style scoped>
 #navbar {
-    transition: transform 0.3s, top 0.3s, background 0.3s;
+    transition:
+        transform 0.3s,
+        top 0.3s,
+        background 0.3s;
 }
 #navbar.hidden-navbar {
     transform: translateY(-100%);

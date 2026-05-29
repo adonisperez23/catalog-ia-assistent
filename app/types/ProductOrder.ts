@@ -4,7 +4,7 @@ export class ProductOrder {
     public product: Product;
     public contornos: Set<string>;
     public amount: number;
-    public limit_contornos: number = 3;
+    public limit_contornos: number = 0;
     public product_without_contornos: string[] = [
         "Pasta a la bologna",
         "Hallaca con ensalada",

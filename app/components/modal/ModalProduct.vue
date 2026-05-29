@@ -80,7 +80,7 @@
                                 }}
                             </p>
                         </div>
-                        <div class="flex flex-col gap-[32px] overflow-auto">
+                        <!-- <div class="flex flex-col gap-[32px] overflow-auto">
                             <div
                                 v-if="
                                     !$store_manager.product_selected
@@ -304,7 +304,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div
                             class="fixed bottom-0 left-0 p-[16px] gap-[16px] z-1 shadow-[0_25px_50px_-12px] flex flex-col bg-[white] w-full sm:p-0 sm:static sm:gap-[32px] sm:shadow-none sm:bg-[#FFFFF6]"
@@ -352,10 +352,6 @@
                                             : 'Agregar'
                                     "
                                     @click="AddProductToStore"
-                                    :disabled="
-                                        !$store_manager.product_selected
-                                            .can_add_order
-                                    "
                                 />
                             </div>
                         </div>
@@ -377,7 +373,6 @@ import { Teleport } from "vue";
 
 const $emit = defineEmits(["close"]);
 
-
 const $store_manager = useStore();
 
 const _show_contornos = ref(true);
@@ -388,11 +383,11 @@ const _show_delivery = ref(true);
 function AddProductToStore() {
     if ($store_manager.value.modal_on === "SELECTED_PRODUCT_EDITING") {
         $store_manager.value.editProductOrder(
-            $store_manager.value.product_selected
+            $store_manager.value.product_selected,
         );
     } else {
         $store_manager.value.addProductOrder(
-            $store_manager.value.product_selected
+            $store_manager.value.product_selected,
         );
     }
 

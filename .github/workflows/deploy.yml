@@ -1,9 +1,9 @@
 name: Deploy to S3
 run-name: deploying changes
-on:
-  push:
-    branches:
-      - master # O la rama que prefieras para producción
+# on:
+#   push:
+#     branches:
+#       - master # O la rama que prefieras para producción
 
 jobs:
   build-and-deploy:

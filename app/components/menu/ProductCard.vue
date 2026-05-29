@@ -1,8 +1,5 @@
 <template>
-    <div
-        @click="$emit('click')"
-        class="flex flex-col gap-[16px] active-hover"
-    >
+    <div @click="$emit('click')" class="flex flex-col gap-[16px] active-hover">
         <picture>
             <source type="image/avif" :srcset="img_avif_url" />
             <source type="image/jpeg" :srcset="img_url" />

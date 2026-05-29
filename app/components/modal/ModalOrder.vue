@@ -141,7 +141,7 @@ function sendOrder() {
     const MENSAJE_ENCODED = encodeURIComponent(MENSAJE);
     console.log(MENSAJE, MENSAJE_ENCODED);
     window.open(
-        `https://api.whatsapp.com/send?phone=584148942782&text=${MENSAJE_ENCODED}+`
+        `https://api.whatsapp.com/send?phone=584148787913&text=${MENSAJE_ENCODED}+`
     );
 }
 
