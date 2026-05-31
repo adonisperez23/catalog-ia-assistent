@@ -1,5 +1,6 @@
 <template>
     <!-- Botón Flotante (Trigger) -->
+    <ChatIndicator />
     <button
         @click="_toggle_chat = !_toggle_chat"
         id="chat-trigger"
@@ -48,6 +49,7 @@
 const _toggle_chat = ref(false);
 
 import { ref, nextTick } from "vue";
+import ChatIndicator from "./ChatIndicator.vue";
 
 // 1. Definición de la estructura de cada mensaje
 interface Mensaje {

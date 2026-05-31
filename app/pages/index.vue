@@ -20,10 +20,12 @@
                     width="170"
                 />
                 <div class="flex justify-between items-center sm:gap-[16px]">
-                    <a class="invisible w-0 sm:w-full sm:visible" href="#menu">Menu</a>
+                    <a class="invisible w-0 sm:w-full sm:visible" href="#menu"
+                        >Menu</a
+                    >
                     <a
                         href="https://api.whatsapp.com/send?phone=584148787913"
-                        class="invisible w-0  sm:w-full sm:visible"
+                        class="invisible w-0 sm:w-full sm:visible"
                         >Whatsapp</a
                     >
                     <button
@@ -50,9 +52,7 @@
             <div class="flex justify-center">
                 <div class="flex flex-col text-center gap-[32px]">
                     <div class="flex flex-col gap-[16px]">
-                        <h1 class="text-[#333333]">
-                            ¿Que torta deseas pedir?
-                        </h1>
+                        <h1 class="text-[#333333]">¿Que torta deseas pedir?</h1>
                         <p class="text-[#333333]">
                             Escoge la torta perfecta para tus celebraciones.
                         </p>
@@ -165,13 +165,16 @@ useSeoMeta({
     ogTitle: "Dulce Caramelo",
     description: "Ricas tortas para tus celebraciones y eventos",
     ogDescription: "Ricas tortas para tus celebraciones y eventos",
-    ogImage:
-        "/icons/logodulce-caramelo.svg",
+    ogImage: "/icons/logodulce-caramelo.svg",
 });
 
 useHead({
     link: [
-        { rel: "icon", type: "image/x-icon", href: "/icons/logodulce-caramelo.svg" },
+        {
+            rel: "icon",
+            type: "image/x-icon",
+            href: "/icons/logodulce-caramelo.svg",
+        },
     ],
 });
 
