@@ -138,7 +138,15 @@
             </div>
         </div>
     </div>
-    <FloatChat />
+    <FloatChat
+        v-if="
+            ![
+                'ORDER_MODAL',
+                'SELECTED_PRODUCT',
+                'SELECTED_PRODUCT_EDITING',
+            ].includes($store_manager.modal_on!)
+        "
+    />
     <ModalOrder
         @close="$store_manager.onCloseModal()"
         v-if="$store_manager.modal_on === 'ORDER_MODAL'"
